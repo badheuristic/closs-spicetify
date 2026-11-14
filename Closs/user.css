@@ -1,0 +1,99 @@
+:root, .encore-dark-theme, .encore-base-set {
+  --encore-title-font-stack: "SF Compact Display", "SF Pro Text", system-ui, sans-serif !important;
+  --encore-body-font-stack: "SF Compact Display", "SF Pro Text", system-ui, sans-serif !important;
+  --encore-variable-font-stack: "SF Compact Display", "SF Pro Text", system-ui, sans-serif !important;
+}
+body, body button, body input, body .encore-text { font-family: "SF Compact Display", "SF Pro Text", system-ui, sans-serif !important; letter-spacing: 0 !important; }
+
+body { background: var(--spice-sidebar) !important; }
+.Root__top-container { background: transparent !important; }
+.Root__top-container::before {
+  content: ""; position: fixed; inset: -20%; z-index: -1; pointer-events: none;
+  background: var(--closs-cover, none) center / cover no-repeat;
+  filter: blur(100px) saturate(1.2) brightness(0.24);
+  opacity: 0; transition: opacity 600ms ease;
+}
+.closs-has-cover .Root__top-container::before { opacity: 1; }
+.Root__globalNav, .main-topBar-container { background: transparent !important; }
+
+.Root__main-view, .Root__right-sidebar {
+  background: var(--spice-main) !important; border-radius: 10px !important;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04) !important; overflow: hidden;
+}
+.Root__nav-bar, .main-yourLibraryX-libraryContainer {
+  background: rgba(var(--spice-rgb-main), 0.45) !important; backdrop-filter: blur(40px) saturate(140%) !important;
+  border-radius: 10px !important; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05) !important;
+}
+.playlist-playlist-playlistContent { background: var(--spice-main) !important; }
+
+.playlist-playlist-actionBarBackground-background,
+.main-actionBarBackground-background,
+.main-entityHeader-backgroundColor, .main-entityHeader-overlay { background: none !important; background-image: none !important; }
+.main-entityHeader-image, .main-entityHeader-image img { border-radius: 8px !important; box-shadow: 0 16px 40px rgba(0,0,0,0.55) !important; }
+.main-entityHeader-title h1, .main-entityHeader-title .encore-text {
+  letter-spacing: -0.02em !important; font-weight: 700 !important;
+}
+.main-topBar-background { background-color: rgba(var(--spice-rgb-main), 0.72) !important; backdrop-filter: blur(24px) saturate(150%) !important; }
+.main-topBar-overlay { background: none !important; }
+
+.main-trackList-trackListRow { border-radius: 6px !important; background-color: transparent !important; }
+[role="row"]:nth-child(odd) > .main-trackList-trackListRow { background-color: rgba(255,255,255,0.03) !important; }
+.main-trackList-trackListRow:hover { background-color: rgba(255,255,255,0.08) !important; }
+.main-trackList-trackListRow[aria-selected="true"] { background-color: rgba(var(--spice-rgb-button), 0.18) !important; }
+.main-trackList-trackListHeaderStuck { background-color: rgba(var(--spice-rgb-main), 0.75) !important; backdrop-filter: blur(24px) !important; border-bottom: 1px solid rgba(255,255,255,0.06) !important; }
+
+.main-card-card { border-radius: 8px !important; background: transparent !important; }
+.main-card-card:hover { background: rgba(255,255,255,0.05) !important; }
+.main-card-imageContainer:not(:has(.main-cardImage-circular)),
+.main-card-imageContainer img:not(.main-cardImage-circular),
+.main-trackList-trackListRow img, .main-nowPlayingWidget-coverArt, .main-nowPlayingWidget-coverArt img { border-radius: 6px !important; }
+.main-card-imageContainer:not(:has(.main-cardImage-circular)) { box-shadow: 0 8px 22px rgba(0,0,0,0.45) !important; }
+
+.spicy-dynamic-bg { filter: brightness(0.5) saturate(1.1) !important; }
+.main-nowPlayingView-section, #SpicyLyricsNPVCard, .SpicyLyricsNPVCard {
+  background-color: rgba(255,255,255,0.06) !important; border-radius: 10px !important;
+  backdrop-filter: blur(20px) !important;
+}
+
+.main-globalNav-searchInputContainer input { border-radius: 10px !important; background-color: rgba(255,255,255,0.07) !important; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05) !important; }
+.main-globalNav-searchInputContainer input:hover { background-color: rgba(255,255,255,0.1) !important; }
+.main-globalNav-searchInputContainer input:focus { background-color: rgba(255,255,255,0.12) !important; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.18) !important; }
+.main-globalNav-searchInputWrapper, .main-globalNav-searchInputContainer [class*="form-input-icon__icon"] { background: transparent !important; }
+
+.main-contextMenu-menu, [data-tippy-root] > div {
+  background-color: rgba(var(--spice-rgb-main-elevated), 0.78) !important; backdrop-filter: blur(30px) saturate(160%) !important;
+  border: 1px solid rgba(255,255,255,0.07) !important; border-radius: 10px !important; box-shadow: 0 12px 32px rgba(0,0,0,0.45) !important;
+}
+.main-contextMenu-menu button, .main-contextMenu-menu a { border-radius: 6px !important; }
+.os-scrollbar-handle { background: rgba(255,255,255,0.14) !important; border-radius: 4px !important; }
+.main-entityHeader-title h1, .main-entityHeader-title .encore-text,
+[data-testid="entityTitle"] h1, [data-testid="entityTitle"] span { font-size: clamp(2rem, 3.6vw, 3.4rem) !important; line-height: 1.08 !important; }
+.main-home-homeHeader, .main-home-filterChipsSection { background: none !important; background-color: transparent !important; }
+.main-home-filterChipsSection { background-color: rgba(var(--spice-rgb-main), 0.72) !important; backdrop-filter: blur(24px) !important; }
+.view-homeShortcutsGrid-shortcut {
+  background: rgba(255,255,255,0.055) !important; border-radius: 8px !important; overflow: hidden;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04) !important; transition: background-color 160ms ease !important;
+}
+.view-homeShortcutsGrid-shortcut:hover { background: rgba(255,255,255,0.1) !important; }
+
+.Root__globalNav button[class*="legacy-button-tertiary"] {
+  background-color: transparent !important; box-shadow: none !important;
+  transition: background-color 160ms ease, opacity 160ms ease !important;
+}
+.main-globalNav-historyButtons button:hover,
+.main-actionButtons button:hover { background-color: rgba(255,255,255,0.08) !important; }
+.Root__globalNav button[aria-label="Marketplace"]:hover,
+.main-globalNav-searchContainer > button:hover { background-color: rgba(255,255,255,0.08) !important; }
+.main-globalNav-searchInputContainer button, .main-globalNav-browseButtonWrapper button { background: transparent !important; box-shadow: none !important; }
+.spicetify-sc-chevronBtn { background: transparent !important; }
+
+.Root__nav-bar, .Root__main-view, .Root__right-sidebar { grid-row: 3 / 5 !important; }
+.Root__now-playing-bar {
+  grid-row: 4 / 5 !important; position: relative !important; z-index: 10 !important;
+  align-self: end; margin: 0 12px 8px !important; padding: 0 4px !important;
+  background: rgba(var(--spice-rgb-main), 0.62) !important; backdrop-filter: blur(36px) saturate(170%) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 10px 34px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.08), inset 0 0 0 1px rgba(255,255,255,0.06) !important;
+}
+.main-view-container__scroll-node-child, .Root__nav-bar [data-overlayscrollbars-contents],
+.Root__right-sidebar [data-overlayscrollbars-contents] { padding-bottom: 96px !important; }
